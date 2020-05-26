@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:i18n="clr-namespace:WhiteLabelingXFSample.Resources"
+             xmlns:imageExtension="clr-namespace:WhiteLabelingXFSample"
+             mc:Ignorable="d"
+             x:Class="WhiteLabelingXFSample.MainPage">
+        <ScrollView>
+            <StackLayout VerticalOptions="CenterAndExpand"
+                         Spacing="20"
+                         Padding="20">
+
+                <Image Source="{imageExtension:Image LoginLogo}"
+                       HeightRequest="100"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"/>
+
+               <Label Text="{i18n:Translate WelcomeMessage}" 
+                      TextColor="{StaticResource Primary}"
+                       HorizontalOptions="Center"
+                       VerticalOptions="CenterAndExpand" />
+
+                  <Entry Placeholder="Email"
+                         PlaceholderColor="{StaticResource Secondary}"/>
+                  <Entry Placeholder="Password"
+                          PlaceholderColor="{StaticResource Secondary}"/>
+                <Button Text="Login"
+                        Command="{Binding LoginCommand}"
+                        TextColor="White"/>
+            </StackLayout>
+        </ScrollView>
+</ContentPage>
