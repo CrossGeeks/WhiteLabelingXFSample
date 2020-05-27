@@ -26,6 +26,9 @@ namespace WhiteLabelingXFSample
             Application.Current.Resources.MergedDictionaries.Add(new App1Style());
 #elif APP2
                 Application.Current.Resources.MergedDictionaries.Add(new App2Style());;
+#elif APP3
+                Application.Current.Resources.MergedDictionaries.Add(new App3Style());;
+
 #endif
             Application.Current.Resources.MergedDictionaries.Add(new GeneralStyle());
         }
@@ -38,7 +41,10 @@ namespace WhiteLabelingXFSample
                 return "WhiteLabelingXFSample.Resources.App1Resources";
 #elif APP2
           return "WhiteLabelingXFSample.Resources.App2Resources";
+#elif APP3
+          return "WhiteLabelingXFSample.Resources.App3Resources";
 #endif
+                return string.Empty;
             }
         }
 
@@ -50,7 +56,10 @@ namespace WhiteLabelingXFSample
                 return "App1";
 #elif APP2
           return "App2";
+#elif APP3
+          return "App3";
 #endif
+                return string.Empty;
             }
         }
 
@@ -62,7 +71,10 @@ namespace WhiteLabelingXFSample
                 return "https:MyApi1";
 #elif APP2
             return "https:MyApi2";
+#elif APP3
+            return "https:MyApi3";
 #endif
+                return string.Empty;
             }
         }
     }

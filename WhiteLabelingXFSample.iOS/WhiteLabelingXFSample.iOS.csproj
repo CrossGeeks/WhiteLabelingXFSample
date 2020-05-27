@@ -158,6 +158,54 @@
     <MtouchLink>None</MtouchLink>
     <MtouchArch>x86_64</MtouchArch>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug-App3|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug-App3</OutputPath>
+    <DefineConstants>__IOS__;__MOBILE__;__UNIFIED__;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>None</MtouchLink>
+    <MtouchInterpreter>-all</MtouchInterpreter>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug-App3|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug-App3</OutputPath>
+    <DefineConstants>__IOS__;__MOBILE__;__UNIFIED__;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release-App3|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release-App3</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release-App3|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release-App3</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
@@ -168,6 +216,9 @@
       <LogicalName>Info.plist</LogicalName>
     </None>
     <None Include="InfoApp1.plist" Condition=" '$(Configuration)|$(Platform)' == 'Debug-App1|iPhoneSimulator' Or '$(Configuration)|$(Platform)' == 'Release-App1|iPhoneSimulator' Or '$(Configuration)|$(Platform)' == 'Debug-App1|iPhone' Or '$(Configuration)|$(Platform)' == 'Release-App1|iPhone'">
+      <LogicalName>Info.plist</LogicalName>
+    </None>
+     <None Include="Info3.plist" Condition=" '$(Configuration)|$(Platform)' == 'Debug-App3|iPhoneSimulator' Or '$(Configuration)|$(Platform)' == 'Release-App3|iPhoneSimulator' Or '$(Configuration)|$(Platform)' == 'Debug-App3|iPhone' Or '$(Configuration)|$(Platform)' == 'Release-App3|iPhone'">
       <LogicalName>Info.plist</LogicalName>
     </None>
   </ItemGroup>
@@ -245,6 +296,14 @@
     <ImageAsset Include="App2Icons.xcassets\LoginLogoApp2.imageset\Contents.json" />
     <ImageAsset Include="App1Icons.xcassets\LoginLogoApp1.imageset\playstore-icon.png" />
     <ImageAsset Include="App2Icons.xcassets\LoginLogoApp2.imageset\playstore-icon.png" />
+    <ImageAsset Include="App3Icons.xcassets\Contents.json" />
+    <ImageAsset Include="App3Icons.xcassets\App3Icon.appiconset\Contents.json" />
+    <ImageAsset Include="App3Icons.xcassets\LoginLogoApp3.imageset\Contents.json" />
+    <ImageAsset Include="App3Icons.xcassets\App3Icon.appiconset\Icon-App-60x60%402x.png" />
+    <ImageAsset Include="App3Icons.xcassets\LoginLogoApp3.imageset\LoginLogoApp3.png" />
+    <ImageAsset Include="App3Icons.xcassets\LoginLogoApp3.imageset\LoginLogoApp3-1.png" />
+    <ImageAsset Include="App3Icons.xcassets\LoginLogoApp3.imageset\LoginLogoApp3-2.png" />
+    <InterfaceDefinition Include="Resources\LaunchScreenApp3.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -270,5 +329,7 @@
     <Folder Include="App2Icons.xcassets\App2Icon.appiconset\" />
     <Folder Include="App1Icons.xcassets\LoginLogoApp1.imageset\" />
     <Folder Include="App2Icons.xcassets\LoginLogoApp2.imageset\" />
+    <Folder Include="App3Icons.xcassets\App3Icon.appiconset\" />
+    <Folder Include="App3Icons.xcassets\LoginLogoApp3.imageset\" />
   </ItemGroup>
 </Project>

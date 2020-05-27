@@ -9,8 +9,10 @@ namespace WhiteLabelingXFSample.Droid
 {
 #if APP1
     [Activity(Label = "App1", Icon = "@mipmap/iconApp1", Theme = "@style/splashscreenApp1", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-#else
+#elif APP2
    [Activity(Label = "App2", Icon = "@mipmap/iconApp2", Theme = "@style/splashscreenApp2", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+#else
+   [Activity(Label = "App3", Icon = "@mipmap/iconApp3", Theme = "@style/splashscreenApp3", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 #endif
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {

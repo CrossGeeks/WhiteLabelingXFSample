@@ -29,6 +29,9 @@
       <style name="splashscreenApp2" parent="Theme.AppCompat.Light.NoActionBar">
          <item name="android:windowBackground">@layout/App2SplashLayout</item>
       </style>
+     <style name="splashscreenApp3" parent="Theme.AppCompat.Light.NoActionBar">
+         <item name="android:windowBackground">@layout/App3SplashLayout</item>
+      </style>
 
     <style name="AppCompatDialogStyle" parent="Theme.AppCompat.Light.Dialog">
         <item name="colorAccent">#FF4081</item>
